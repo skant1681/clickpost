@@ -1,0 +1,35 @@
+
+______________________________________________________________________________________________________________
+
+													Steps to run the application:
+													------------------------------------------
+
+1) Create a new directory:
+
+$ mkdir clickpost
+$ cd clickpost
+
+2)(Optional) Create a virtual environment:
+	~/clickpost$ virtualenv -p python3 venv
+	~/clickpost$ source venv/bin/activate
+
+3) Install all the packages
+	~/clickpost$ pip install -r requirements.txt
+
+4) Start celery 
+	~clickpost$ celery -A main_app.celery worker -l info
+
+5) Start memcache
+	$ memcached
+
+6) Start mongodb
+	$ sudo service mongod restart
+
+7) Connect to mongodb server
+	$ mongo --host 127.0.0.1:27017
+
+8) Run main_app.py
+_______________________________________________________________________________________________________________
+			
+
+
